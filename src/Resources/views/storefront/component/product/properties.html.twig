@@ -1,0 +1,30 @@
+{% sw_extends '@Storefront/storefront/component/product/properties.html.twig' %}
+
+{% block component_product_properties_item_label %}
+    {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_before %}{% endblock %}
+
+    {% if group.customFields['sschreier_property_group_tooltip'] %}
+        {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_custom %}
+            <th class="properties-label">
+                {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_custom_label %}
+                    <span class="properties-label-text">
+                        {{ group.translated.name|e }}:
+                    </span>
+                {% endblock %}
+                {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_custom_tooltip %}
+                    <span class="properties-label-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="{{ group.customFields['sschreier_property_group_tooltip']|raw }}">
+                        {% sw_icon 'info' %}
+                    </span>
+                {% endblock %}
+            </th>
+        {% endblock %}
+    {% else %}
+        {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_default_before %}{% endblock %}
+
+        {{ parent() }}
+
+        {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_default_after %}{% endblock %}
+    {% endif %}
+
+    {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_after %}{% endblock %}
+{% endblock %}

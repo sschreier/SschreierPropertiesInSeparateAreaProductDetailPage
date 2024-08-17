@@ -1,0 +1,23 @@
+{% sw_extends '@Storefront/storefront/component/buy-widget/buy-widget.html.twig' %}
+
+{% block buy_widget_ordernumber_container %}
+    {% block buy_widget_ordernumber_container_propertiesinseparateareaproductdetailpage_before %}{% endblock %}
+
+    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesIn') === "modal" and config('SschreierPropertiesInSeparateAreaProductDetailPage.config.positionLinkToModal') === "above_product_number" %}
+        {% set additionalCssClass = "link-above-product-number" %}
+
+        {% block buy_widget_ordernumber_container_propertiesinseparateareaproductdetailpage_custom_properties_link_to_open_modal %}
+            {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/modal/properties-link-to-open-modal.html.twig' with {
+                additionalCssClass: additionalCssClass,
+                product: element.data.product,
+                showIcon: config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showIconBeforeLinkToModal')
+            } %}
+        {% endblock %}
+    {% endif %}
+
+    {% block buy_widget_ordernumber_container_propertiesinseparateareaproductdetailpage_default_before %}{% endblock %}
+
+    {{ parent() }}
+
+    {% block buy_widget_ordernumber_container_propertiesinseparateareaproductdetailpage_after %}{% endblock %}
+{% endblock %}

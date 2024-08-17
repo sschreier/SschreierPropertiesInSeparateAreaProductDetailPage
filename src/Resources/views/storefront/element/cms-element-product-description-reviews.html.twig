@@ -1,0 +1,62 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-product-description-reviews.html.twig' %}
+
+{% block element_product_description_reviews %}
+    {% block element_product_description_reviews_propertiesinseparateareaproductdetailpage_before %}{% endblock %}
+
+    {{ parent() }}
+
+    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesIn') === "modal" %}
+        {% block element_product_description_reviews_propertiesinseparateareaproductdetailpage_custom_modal_content %}
+            {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/modal/properties-content.html.twig' with {
+                product: element.data.product
+            } %}
+        {% endblock %}
+    {% endif %}
+
+    {% block element_product_description_reviews_propertiesinseparateareaproductdetailpage_after %}{% endblock %}
+{% endblock %}
+
+{% block element_product_description_reviews_tabs_navigation_review %}
+    {% block element_product_description_reviews_tabs_navigation_review_propertiesinseparateareaproductdetailpage_before %}{% endblock %}
+
+    {% if not(config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesTabBeforeRatingTab')) %}
+        {{ parent() }}
+    {% endif %}
+
+    {% block element_product_description_reviews_tabs_navigation_review_propertiesinseparateareaproductdetailpage_custom_title %}
+        {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesIn') === "tab" and product.sortedProperties|length > 0 %}
+            {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/tab/properties-title.html.twig' %}
+        {% endif %}
+    {% endblock %}
+
+    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesTabBeforeRatingTab') %}
+        {{ parent() }}
+    {% endif %}
+
+    {% block element_product_description_reviews_tabs_navigation_review_propertiesinseparateareaproductdetailpage_after %}{% endblock %}
+{% endblock %}
+
+{% block element_product_description_reviews_tabs_content_review %}
+    {% block element_product_description_reviews_tabs_content_review_propertiesinseparateareaproductdetailpage_before %}{% endblock %}
+
+    {% if not(config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesTabBeforeRatingTab')) %}
+        {{ parent() }}
+    {% endif %}
+
+    {% block element_product_description_reviews_tabs_content_review_propertiesinseparateareaproductdetailpage_custom_tab_content %}
+        {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesIn') === "tab" and product.sortedProperties|length > 0 %}
+            <div class="tab-pane fade show"
+                 id="{{ 'properties-tab-' ~ product.id ~ '-pane' }}"
+                 role="tabpanel"
+                 aria-labelledby="{{ 'properties-tab-' ~ product.id }}">
+                {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/tab/properties-content.html.twig' %}
+            </div>
+        {% endif %}
+    {% endblock %}
+
+    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesTabBeforeRatingTab') %}
+        {{ parent() }}
+    {% endif %}
+
+    {% block element_product_description_reviews_tabs_content_review_propertiesinseparateareaproductdetailpage_after %}{% endblock %}
+{% endblock %}

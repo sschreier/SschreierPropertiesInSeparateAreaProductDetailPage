@@ -1,0 +1,48 @@
+<?php
+declare(strict_types=1);
+
+namespace Sschreier\PropertiesInSeparateAreaProductDetailPage;
+
+use Shopware\Core\Framework\DataAbstractionLayer\Search\Criteria;
+use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\EqualsFilter;
+use Shopware\Core\Framework\Plugin;
+use Shopware\Core\Framework\Plugin\Context\InstallContext;
+use Shopware\Core\Framework\Plugin\Context\UninstallContext;
+
+class SschreierPropertiesInSeparateAreaProductDetailPage extends Plugin
+{
+    const CUSTOM_FIELD_SET_TECHNICAL_NAME = 'sschreier_property_group';
+
+    public function install(InstallContext $installContext): void
+    {
+        parent::install($installContext);
+    }
+
+    public function uninstall(UninstallContext $uninstallContext): void
+    {
+        if ($uninstallContext->keepUserData()) {
+            parent::uninstall($uninstallContext);
+
+            return;
+        }
+
+        $this->removeCustomField($uninstallContext->getContext());
+
+        parent::uninstall($uninstallContext);
+    }
+
+    private function removeCustomField($uninstallContext): void
+    {
+        $customFieldSetRepository = $this->container->get('custom_field_set.repository');
+
+        $criteria = new Criteria();
+        $criteria->addFilter(new EqualsFilter('name', self::CUSTOM_FIELD_SET_TECHNICAL_NAME));
+
+        $result = $customFieldSetRepository->searchIds($criteria, $uninstallContext);
+
+        if ($result->getTotal() > 0) {
+            $data = $result->getDataOfId($result->firstId());
+            $customFieldSetRepository->delete([$data], $uninstallContext);
+        }
+    }
+}

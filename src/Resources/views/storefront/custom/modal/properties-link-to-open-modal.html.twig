@@ -1,0 +1,17 @@
+<a
+    href="javascript:void(0);"
+    class="open-modal-link {{ additionalCssClass }}"
+    data-bs-toggle="modal"
+    data-bs-target="#propertiesModal-{{ product.id }}"
+    title="{{ "sschreier.propertiesinseparateareaproductdetailpage.modal.linkToOpenModal"|trans|sw_sanitize }}">
+    {% if showIcon %}
+        {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_link_to_open_modal_icon %}
+            {% sw_icon 'stack' style { class: 'open-modal-link', size: 'sm' } %}
+        {% endblock %}
+    {% endif %}
+    {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_link_to_open_modal_text %}
+        <span class="open-modal-link-text{% if showIcon %} link-has-icon{% endif %}">
+            {{ "sschreier.propertiesinseparateareaproductdetailpage.modal.linkToOpenModal"|trans }}
+        </span>
+    {% endblock %}
+</a>

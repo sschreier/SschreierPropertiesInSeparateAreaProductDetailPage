@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>general settings</title>
+        <title lang="de-DE">Allgemeine Einstellungen</title>
+
+        <input-field type="single-select">
+            <name>showPropertiesIn</name>
+            <label>show properties</label>
+            <label lang="de-DE">Eigenschaften anzeigen</label>
+            <options>
+                <option>
+                    <id>default</id>
+                    <name>in the description text in the description tab</name>
+                    <name lang="de-DE">im Beschreibungstext im Tab Beschreibung</name>
+                </option>
+                <option>
+                    <id>tab</id>
+                    <name>in separate tab</name>
+                    <name lang="de-DE">in einem eigenem Tab</name>
+                </option>
+                <option>
+                    <id>modal</id>
+                    <name>in a modal</name>
+                    <name lang="de-DE">in einer Modalbox</name>
+                </option>
+            </options>
+            <defaultValue>default</defaultValue>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>PropertiesTitleSnippet</name>
+            <label>title of the modal or title of the label of the tab</label>
+            <label lang="de-DE">Titel der Modalbox oder der Beschriftung des Tabs</label>
+            <snippet>sschreier.propertiesinseparateareaproductdetailpage.title</snippet>
+            <helpText>click on the globe to edit the translations</helpText>
+            <helpText lang="de-DE">Klicke auf den Globus, um die Übersetzung zu bearbeiten</helpText>
+        </component>
+
+        <input-field type="bool">
+            <name>showHeadlineAbovePropertyTable</name>
+            <label>show headline above the property table</label>
+            <label lang="de-DE">Überschrift über der Eigenschaftstabelle anzeigen</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>headlineAbovePropertyTableSnippet</name>
+            <label>headline above the property table</label>
+            <label lang="de-DE">Überschrift über der Eigenschaftstabelle</label>
+            <snippet>sschreier.propertiesinseparateareaproductdetailpage.headline</snippet>
+            <helpText>click on the globe to edit the translations</helpText>
+            <helpText lang="de-DE">Klicke auf den Globus, um die Übersetzung zu bearbeiten</helpText>
+        </component>
+
+        <input-field type="bool">
+            <name>showTextAbovePropertyTable</name>
+            <label>show text above the property table</label>
+            <label lang="de-DE">Text über der Eigenschaftstabelle anzeigen</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>textAbovePropertyTableSnippet</name>
+            <label>text above the property table</label>
+            <label lang="de-DE">Text über der Eigenschaftstabelle</label>
+            <snippet>sschreier.propertiesinseparateareaproductdetailpage.text</snippet>
+            <helpText>click on the globe to edit the translations</helpText>
+            <helpText lang="de-DE">Klicke auf den Globus, um die Übersetzung zu bearbeiten</helpText>
+        </component>
+
+        <input-field type="bool">
+            <name>showPropertyTableLargerResolutionsFullWidth</name>
+            <label>show property table in larger resolutions in full width</label>
+            <label lang="de-DE">Eigenschaftstabelle in größeren Auflösungen in voller Breite anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+    </card>
+
+    <card>
+        <title>general settings for the tab</title>
+        <title lang="de-DE">Allgemeine Einstellungen für den Tab</title>
+
+        <input-field type="bool">
+            <name>showPropertiesTabBeforeRatingTab</name>
+            <label>show the properties tab before the rating tab</label>
+            <label lang="de-DE">Eigenschaften-Tab vor dem Bewertungen-Tab anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>previewTextOfTabSnippet</name>
+            <label>preview text of the tab in the smaller resolutions</label>
+            <label lang="de-DE">Vorschautext des Tabs in den kleineren Auflösungen</label>
+            <snippet>sschreier.propertiesinseparateareaproductdetailpage.tab.previewMore</snippet>
+            <helpText>click on the globe to edit the translations</helpText>
+            <helpText lang="de-DE">Klicke auf den Globus, um die Übersetzung zu bearbeiten</helpText>
+        </component>
+    </card>
+
+    <card>
+        <title>general settings for the modal</title>
+        <title lang="de-DE">Allgemeine Einstellungen für die Modalbox</title>
+
+        <input-field type="single-select">
+            <name>positionLinkToModal</name>
+            <label>position of the link to open the modal</label>
+            <label lang="de-DE">Position des Links zum Öffnen der Modalbox</label>
+            <options>
+                <option>
+                    <id>above_buy_button</id>
+                    <name>above the buy button</name>
+                    <name lang="de-DE">oberhalb der In den Warenkorb-Schaltfläche</name>
+                </option>
+                <option>
+                    <id>above_product_number</id>
+                    <name>above the product number</name>
+                    <name lang="de-DE">oberhalb der Produktnummer</name>
+                </option>
+                <option>
+                    <id>below_description_text_in_description_tab</id>
+                    <name>below the description text in the description tab</name>
+                    <name lang="de-DE">unterhalb des Beschreibungstextes im Tab Beschreibung</name>
+                </option>
+            </options>
+            <defaultValue>below_description_text_in_description_tab</defaultValue>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>linkToModalTextSnippet</name>
+            <label>text of the link to open the modal</label>
+            <label lang="de-DE">Text des Links zum Öffnen der Modalbox</label>
+            <snippet>sschreier.propertiesinseparateareaproductdetailpage.modal.linkToOpenModal</snippet>
+            <helpText>click on the globe to edit the translations</helpText>
+            <helpText lang="de-DE">Klicke auf den Globus, um die Übersetzung zu bearbeiten</helpText>
+        </component>
+
+        <input-field type="bool">
+            <name>showIconBeforeLinkToModal</name>
+            <label>show icon before the link to open the modal above the product number</label>
+            <label lang="de-DE">Icon vor dem Link zum Öffnen der Modalbox oberhalb der Produktnummer anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>showModalTitle</name>
+            <label>show the modal title</label>
+            <label lang="de-DE">Titel der Modalbox anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>sizeModal</name>
+            <label>size of the modal</label>
+            <label lang="de-DE">Größe der Modalbox</label>
+            <options>
+                <option>
+                    <id>sm</id>
+                    <name>300 pixels</name>
+                    <name lang="de-DE">300 Pixel</name>
+                </option>
+                <option>
+                    <id>default</id>
+                    <name>500 pixels</name>
+                    <name lang="de-DE">500 Pixel</name>
+                </option>
+                <option>
+                    <id>lg</id>
+                    <name>800 pixels</name>
+                    <name lang="de-DE">800 Pixel</name>
+                </option>
+                <option>
+                    <id>xl</id>
+                    <name>1140 pixels</name>
+                    <name lang="de-DE">1140 Pixel</name>
+                </option>
+            </options>
+            <defaultValue>lg</defaultValue>
+        </input-field>
+    </card>
+</config>

@@ -1,0 +1,24 @@
+<li class="nav-item">
+    <a class="nav-link product-detail-tab-navigation-link {{ 'product-detail-properties-tab-' ~ product.id }}"
+        id="{{ 'properties-tab-' ~ product.id }}"
+        data-bs-toggle="tab"
+        data-off-canvas-tabs="true"
+        href="{{ '#properties-tab-' ~ product.id ~ '-pane' }}"
+        role="tab"
+        aria-controls="{{ 'properties-tab-' ~ product.id ~ '-pane' }}"
+        aria-selected="true">
+        <span>
+            {% block propertiesinseparateareaproductdetailpage_custom_tab_properties_title %}
+                {{ "sschreier.propertiesinseparateareaproductdetailpage.title"|trans }}
+            {% endblock %}
+        </span>
+        <span class="product-detail-tab-navigation-icon">
+            {% sw_icon 'arrow-medium-right' style {'pack':'solid'} %}
+        </span>
+        <span class="product-detail-tab-preview">
+            {% block propertiesinseparateareaproductdetailpage_custom_tab_properties_preview %}
+               {{ "sschreier.propertiesinseparateareaproductdetailpage.tab.previewMore"|trans|raw }}
+            {% endblock %}
+        </span>
+    </a>
+</li>

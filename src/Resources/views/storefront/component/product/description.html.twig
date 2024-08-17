@@ -1,0 +1,37 @@
+{% sw_extends '@Storefront/storefront/component/product/description.html.twig' %}
+
+{% block component_product_description_content_properties %}
+    {% block component_product_description_content_properties_propertiesinseparateareaproductdetailpage_before %}{% endblock %}
+
+    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showHeadlineAbovePropertyTable') and config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesIn') === "default" %}
+        {% block component_product_description_content_properties_propertiesinseparateareaproductdetailpage_headline %}
+            {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/properties-headline.html.twig' %}
+        {% endblock %}
+    {% endif %}
+
+    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showTextAbovePropertyTable') and config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesIn') === "default" %}
+        {% block component_product_description_content_properties_propertiesinseparateareaproductdetailpage_text %}
+            {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/properties-text.html.twig' %}
+        {% endblock %}
+    {% endif %}
+
+    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesIn') === "default" %}
+        <div class="product-detail-properties-container{% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertyTableLargerResolutionsFullWidth') %} is-full-width{% endif %}">
+            {{ parent() }}
+        </div>
+    {% endif %}
+
+    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertiesIn') === "modal" and config('SschreierPropertiesInSeparateAreaProductDetailPage.config.positionLinkToModal') === "below_description_text_in_description_tab" %}
+        {% set additionalCssClass = "link-below-description-text" %}
+
+        {% block component_product_description_content_properties_custom_properties_link_to_open_modal %}
+            {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/modal/properties-link-to-open-modal.html.twig' with {
+                additionalCssClass: additionalCssClass,
+                product: element.data.product,
+                showIcon: false
+            } %}
+        {% endblock %}
+    {% endif %}
+
+    {% block component_product_description_content_properties_propertiesinseparateareaproductdetailpage_after %}{% endblock %}
+{% endblock %}

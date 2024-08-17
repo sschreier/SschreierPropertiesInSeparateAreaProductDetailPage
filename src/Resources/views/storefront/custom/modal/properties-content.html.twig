@@ -1,0 +1,51 @@
+<div
+    class="modal {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.sizeModal') === "sm" %}modal-sm {% elseif config('SschreierPropertiesInSeparateAreaProductDetailPage.config.sizeModal') === "lg" %}modal-lg {% elseif config('SschreierPropertiesInSeparateAreaProductDetailPage.config.sizeModal') === "xl" %}modal-xl {% endif %}modal-properties modal-properties-{{ product.id }} fade"
+    id="propertiesModal-{{ product.id }}"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="propertiesModalLabel-{{ product.id }}"
+    aria-hidden="true">
+    <div
+        class="modal-dialog"
+        role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_header %}
+                    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showModalTitle') %}
+                        <div class="modal-title h5" id="propertiesModalLabel-{{ product.id }}">{{ "sschreier.propertiesinseparateareaproductdetailpage.title"|trans({"%productname%": product.translated.name}) }}</div>
+                    {% endif %}
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+                {% endblock %}
+            </div>
+            <div class="modal-body">
+                {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_body %}
+                    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showHeadlineAbovePropertyTable') %}
+                        {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_headline %}
+                            {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/properties-headline.html.twig' with {
+                                product: product
+                            } %}
+                        {% endblock %}
+                    {% endif %}
+
+                    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showTextAbovePropertyTable') %}
+                        {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_text %}
+                            {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/properties-text.html.twig' with {
+                                product: product
+                            } %}
+                        {% endblock %}
+                    {% endif %}
+
+                    {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_properties_container %}
+                        <div class="product-detail-properties-container{% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertyTableLargerResolutionsFullWidth') %} is-full-width{% endif %}">
+                            {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_properties %}
+                                {% sw_include '@Storefront/storefront/component/product/properties.html.twig' with {
+                                    product: product
+                                } %}
+                            {% endblock %}
+                        </div>
+                    {% endblock %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>

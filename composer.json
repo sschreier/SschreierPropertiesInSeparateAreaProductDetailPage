@@ -1,0 +1,43 @@
+{
+    "name": "sschreier/sschreierpropertiesinseparateareaproductdetailpage",
+    "description": "show the properties in a separate area on the product detail page",
+    "version": "1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Sebastian Schreier",
+            "role": "Manufacturer"
+        }
+    ],
+    "require": {
+        "shopware/core": "~6.6.0",
+        "shopware/storefront": "~6.6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "Sschreier\\PropertiesInSeparateAreaProductDetailPage\\SschreierPropertiesInSeparateAreaProductDetailPage",
+        "plugin-icon": "src/Resources/config/plugin.png",
+        "copyright": "Sebastian Schreier",
+        "label": {
+            "de-DE": "Anzeige der Eigenschaften in einem eigenen Bereich auf der Produkt - Detailseite",
+            "en-GB": "show the properties in a separate area on the product detail page"
+        },
+        "description": {
+            "de-DE": "Die Erweiterung ermöglicht es, Eigenschaften in einem eigenen Bereich auf der Produkt - Detailseite anzeigen zu lassen. Der eigene Bereich kann entweder ein eigener Tab oder eine Modalbox sein, die über einen Link erreichbar ist. Den Tab kann man sich vor oder nach dem Bewertungen-Tab anzeigen lassen. Der Link zum Öffnen der Modalbox kann entweder oberhalb der In den Warenkorb-Schaltfläche, oberhalb der Produktnummer oder unterhalb des Beschreibungstextes im Tab Beschreibung platziert werden. Des Weiteren kann man sich bei Bedarf eine Überschrift und einen Text über der Eigenschaftstabelle anzeigen lassen. Darüber hinaus können auch Tooltips zur Beschreibung der Eigenschaften angezeigt werden.",
+            "en-GB": "The extension allows to show the properties in a separate area on the product detail page. The separate area can either be a separate tab or a modal that can be reached via a link. The tab can be shown before or after the rating tab. The link to open the modal can be placed either above the buy button, above the product number or below the description text in the description tab. Furthermore, you can show a headline and a text above the property table if required. In addition, tooltips can also be shown to describe the properties."
+        },
+        "manufacturerLink": {
+            "de-DE": "https://www.sebastianschreier.de",
+            "en-GB": "https://www.sebastianschreier.de"
+        },
+        "supportLink": {
+            "de-DE": "https://www.sebastianschreier.de",
+            "en-GB": "https://www.sebastianschreier.de"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sschreier\\PropertiesInSeparateAreaProductDetailPage\\": "src/"
+        }
+    }
+}

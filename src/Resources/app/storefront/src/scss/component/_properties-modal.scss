@@ -1,0 +1,30 @@
+.open-modal-link {
+  .open-modal-link-text {
+    text-decoration: underline;
+  }
+
+  &.link-above-buy-button {
+    display: block;
+    margin: 0 0 20px 0;
+  }
+
+  &.link-above-product-number {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+
+    .open-modal-link-text {
+      color: #000000;
+
+      &.link-has-icon {
+        position: relative;
+        top: -3px;
+        margin-left: 2px;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

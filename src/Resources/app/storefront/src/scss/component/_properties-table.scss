@@ -1,0 +1,38 @@
+.product-detail-properties-text {
+  margin-bottom: 24px;
+}
+
+.product-detail-properties-table {
+  .properties-label {
+    position: relative;
+
+    .properties-label-tooltip {
+      position: absolute;
+      margin-left: 5px;
+      width: 22px;
+      height: 22px;
+
+      .icon {
+        &.icon-info {
+          svg {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .product-detail-properties-container {
+    &.is-full-width {
+      .product-detail-properties {
+        .product-detail-properties-container {
+          .col-lg-6 {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
