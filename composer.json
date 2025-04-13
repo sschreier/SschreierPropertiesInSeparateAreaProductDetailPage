@@ -1,7 +1,7 @@
 {
     "name": "sschreier/sschreierpropertiesinseparateareaproductdetailpage",
-    "description": "show the properties in a separate area on the product detail page",
-    "version": "1.0.2",
+    "description": "properties in a separate area on the product detail page",
+    "version": "1.0.3",
     "type": "shopware-platform-plugin",
     "license": "GPL-3.0-or-later",
     "authors": [
