@@ -1,9 +1,9 @@
-<a
-    href="javascript:void(0);"
-    class="open-modal-link {{ additionalCssClass }}"
+<button
+    class="btn btn-link-inline open-modal-link {{ additionalCssClass }}"
     data-bs-toggle="modal"
     data-bs-target="#propertiesModal-{{ product.id }}"
-    title="{{ "sschreier.propertiesinseparateareaproductdetailpage.modal.linkToOpenModal"|trans|sw_sanitize }}">
+    title="{{ "sschreier.propertiesinseparateareaproductdetailpage.modal.linkToOpenModal"|trans|sw_sanitize }}"
+    type="button">
     {% if showIcon %}
         {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_link_to_open_modal_icon %}
             {% sw_icon 'stack' style { class: 'open-modal-link', size: 'sm' } %}
@@ -14,4 +14,4 @@
             {{ "sschreier.propertiesinseparateareaproductdetailpage.modal.linkToOpenModal"|trans }}
         </span>
     {% endblock %}
-</a>
+</button>

@@ -1,4 +1,9 @@
 .open-modal-link {
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+
   .open-modal-link-text {
     text-decoration: underline;
   }
@@ -18,7 +23,7 @@
 
       &.link-has-icon {
         position: relative;
-        top: -3px;
+        top: -1px;
         margin-left: 2px;
       }
     }
