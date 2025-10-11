@@ -87,52 +87,52 @@ bin/console plugin:install --activate SschreierPropertiesInSeparateAreaProductDe
 
 ### default: properties within the description tab
 
-![default: properties within the description tab](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image1.jpg)
+![default: properties within the description tab](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image1.jpg)
 
 ### properties in a separate tab
 
-![properties in a separate tab](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image2.jpg)
+![properties in a separate tab](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image2.jpg)
 
 ### properties in a separate tab and with a custom headline and text
 
-![properties in a separate tab and with a custom headline and text](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image3.jpg)
+![properties in a separate tab and with a custom headline and text](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image3.jpg)
 
 ### properties in a modal that can be reached via a link that is located below the description text in the description tab
 
-![properties in a modal that can be reached via a link that is located below the description text in the description tab](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image4.jpg)
+![properties in a modal that can be reached via a link that is located below the description text in the description tab](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image4.jpg)
 
 ### properties in a modal
 
-![properties in a modal](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image5.jpg)
+![properties in a modal](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image5.jpg)
 
 ### properties in a modal that can be reached via a link that is located above the buy button
 
-![properties in a modal that can be reached via a link that is located above the buy button](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image6.jpg)
+![properties in a modal that can be reached via a link that is located above the buy button](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image6.jpg)
 
 ### properties in a modal that can be reached via a link that is located above the product number
 
-![properties in a modal that can be reached via a link that is located above the product number](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image7.jpg)
+![properties in a modal that can be reached via a link that is located above the product number](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image7.jpg)
 
 ### properties within the description tab with a tooltip icon
 
-![properties within the description tab with a tooltip icon](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image8.jpg)
+![properties within the description tab with a tooltip icon](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image8.jpg)
 
 ### properties within the description tab with an open tooltip
 
-![properties within the description tab with an open tooltip](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image9.jpg)
+![properties within the description tab with an open tooltip](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image9.jpg)
 
 ### extension configuration part 1
 
-![extension configuration part 1](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image10.jpg)
+![extension configuration part 1](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image10.jpg)
 
 ### extension configuration part 2
 
-![extension configuration part 2](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image11.jpg)
+![extension configuration part 2](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image11.jpg)
 
 ### extension configuration part 3
 
-![extension configuration part 3](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image12.jpg)
+![extension configuration part 3](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image12.jpg)
 
 ### custom description for a property displayed in a tooltip and set within the custom fields of a property
 
-![custom description for a property displayed in a tooltip and set within the custom fields of a property](https://www.sebastianschreier.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image13.jpg)
+![custom description for a property displayed in a tooltip and set within the custom fields of a property](https://www.web-solutions-dresden.de/plugins/SschreierPropertiesInSeparateAreaProductDetailPage/SschreierPropertiesInSeparateAreaProductDetailPage-Image13.jpg)

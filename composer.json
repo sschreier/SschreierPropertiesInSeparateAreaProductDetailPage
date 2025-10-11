@@ -1,7 +1,7 @@
 {
     "name": "sschreier/sschreierpropertiesinseparateareaproductdetailpage",
     "description": "show the properties in a separate area on the product detail page",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "type": "shopware-platform-plugin",
     "license": "GPL-3.0-or-later",
     "authors": [
@@ -27,12 +27,12 @@
             "en-GB": "The extension allows to show the properties in a separate area on the product detail page. The separate area can either be a separate tab or a modal that can be reached via a link. The tab can be shown before or after the rating tab. The link to open the modal can be placed either above the buy button, above the product number or below the description text in the description tab. Furthermore, you can show a headline and a text above the property table if required. In addition, tooltips can also be shown to describe the properties."
         },
         "manufacturerLink": {
-            "de-DE": "https://www.sebastianschreier.de",
-            "en-GB": "https://www.sebastianschreier.de"
+            "de-DE": "https://www.web-solutions-dresden.de",
+            "en-GB": "https://www.web-solutions-dresden.de"
         },
         "supportLink": {
-            "de-DE": "https://www.sebastianschreier.de",
-            "en-GB": "https://www.sebastianschreier.de"
+            "de-DE": "https://www.web-solutions-dresden.de",
+            "en-GB": "https://www.web-solutions-dresden.de"
         }
     },
     "autoload": {
