@@ -1,9 +1,11 @@
 {% sw_extends '@Storefront/storefront/component/product/properties.html.twig' %}
 
 {% block component_product_properties_item_label %}
+    {% set tooltip = group.customFields['sschreier_property_group_tooltip'] %}
+
     {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_before %}{% endblock %}
 
-    {% if group.customFields['sschreier_property_group_tooltip'] %}
+    {% if tooltip %}
         {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_custom %}
             <th class="properties-label">
                 {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_custom_label %}
@@ -12,7 +14,7 @@
                     </span>
                 {% endblock %}
                 {% block component_product_properties_item_label_propertiesinseparateareaproductdetailpage_custom_tooltip %}
-                    <span class="properties-label-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="{{ group.customFields['sschreier_property_group_tooltip']|raw }}">
+                    <span class="properties-label-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="{{ tooltip|sw_sanitize|e('html_attr') }}">
                         {% sw_icon 'info' %}
                     </span>
                 {% endblock %}

@@ -1,5 +1,11 @@
+{% set modalSize = config('SschreierPropertiesInSeparateAreaProductDetailPage.config.sizeModal') %}
+{% set showModalTitle = config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showModalTitle') %}
+{% set showHeadline = config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showHeadlineAbovePropertyTable') %}
+{% set showText = config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showTextAbovePropertyTable') %}
+{% set showPropertiesInFullWidth = config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertyTableLargerResolutionsFullWidth') %}
+
 <div
-    class="modal {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.sizeModal') === "sm" %}modal-sm {% elseif config('SschreierPropertiesInSeparateAreaProductDetailPage.config.sizeModal') === "lg" %}modal-lg {% elseif config('SschreierPropertiesInSeparateAreaProductDetailPage.config.sizeModal') === "xl" %}modal-xl {% endif %}modal-properties modal-properties-{{ product.id }} fade"
+    class="modal {% if modalSize in ['sm', 'lg', 'xl'] %}modal-{{ modalSize }} {% endif %}modal-properties modal-properties-{{ product.id }} fade"
     id="propertiesModal-{{ product.id }}"
     tabindex="-1"
     role="dialog"
@@ -11,7 +17,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_header %}
-                    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showModalTitle') %}
+                    {% if showModalTitle %}
                         <div class="modal-title h5" id="propertiesModalLabel-{{ product.id }}">{{ "sschreier.propertiesinseparateareaproductdetailpage.title"|trans({"%productname%": product.translated.name}) }}</div>
                     {% endif %}
                     <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -19,7 +25,7 @@
             </div>
             <div class="modal-body">
                 {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_body %}
-                    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showHeadlineAbovePropertyTable') %}
+                    {% if showHeadline %}
                         {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_headline %}
                             {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/properties-headline.html.twig' with {
                                 product: product
@@ -27,7 +33,7 @@
                         {% endblock %}
                     {% endif %}
 
-                    {% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showTextAbovePropertyTable') %}
+                    {% if showText %}
                         {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_text %}
                             {% sw_include '@SschreierPropertiesInSeparateAreaProductDetailPage/storefront/custom/properties-text.html.twig' with {
                                 product: product
@@ -36,7 +42,7 @@
                     {% endif %}
 
                     {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_properties_container %}
-                        <div class="product-detail-properties-container{% if config('SschreierPropertiesInSeparateAreaProductDetailPage.config.showPropertyTableLargerResolutionsFullWidth') %} is-full-width{% endif %}">
+                        <div class="product-detail-properties-container{% if showPropertiesInFullWidth %} is-full-width{% endif %}">
                             {% block propertiesinseparateareaproductdetailpage_custom_modal_properties_content_properties %}
                                 {% sw_include '@Storefront/storefront/component/product/properties.html.twig' with {
                                     product: product
